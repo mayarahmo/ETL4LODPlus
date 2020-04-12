@@ -3,26 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.ufrj.ppgi.greco.kettle</groupId>
 		<artifactId>plugins</artifactId>
 		<version>2.0</version>
 	</parent>
-	
-	<developers>
-		<developer>
-			<id>mayara.morais.santos</id>
-			<name>Mayara Morais dos Santos</name>
-			<email>mayara.morais.santos@gmail.com</email>
-			<organization>UFRJ (PPGI/GRECO)</organization>
-			<organizationUrl>http://greco.ppgi.ufrj.br</organizationUrl>
-		</developer>
-	</developers>
-	
-	<groupId>br.ufrj.ppgi.greco.kettle.TurtleGenerator</groupId>
-	<artifactId>TurtleGenerator</artifactId>
+
+	<groupId>br.ufrj.ppgi.greco.kettle.DataCube</groupId>
+	<artifactId>DataCube</artifactId>
 	<version>1.1</version>
-	<name>TurtleGenerator</name>
+	<name>DataCube</name>
 
 	<build>
 		<plugins>

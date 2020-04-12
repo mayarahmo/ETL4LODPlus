@@ -3,26 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.ufrj.ppgi.greco.kettle</groupId>
 		<artifactId>plugins</artifactId>
 		<version>2.0</version>
 	</parent>
-	
-	<developers>
-		<developer>
-			<id>mayara.morais.santos</id>
-			<name>Mayara Morais dos Santos</name>
-			<email>mayara.morais.santos@gmail.com</email>
-			<organization>UFRJ (PPGI/GRECO)</organization>
-			<organizationUrl>http://greco.ppgi.ufrj.br</organizationUrl>
-		</developer>
-	</developers>
-	
-	<groupId>br.ufrj.ppgi.greco.kettle.TurtleGenerator</groupId>
-	<artifactId>TurtleGenerator</artifactId>
+
+	<groupId>br.ufrj.ppgi.greco.kettle.Any23Converter</groupId>
+	<artifactId>Any23Converter</artifactId>
 	<version>1.1</version>
-	<name>TurtleGenerator</name>
+	<name>Any23Converter</name>
 
 	<build>
 		<plugins>
@@ -109,6 +100,51 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/lib</outputDirectory>
 								</artifactItem>
+								
+								<artifactItem>
+									<groupId>org.apache.any23</groupId>
+									<artifactId>apache-any23-core</artifactId>
+									<version>${any23.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/lib</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.apache.any23</groupId>
+									<artifactId>apache-any23-api</artifactId>
+									<version>${any23.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/lib</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.apache.any23</groupId>
+									<artifactId>apache-any23-csvutils</artifactId>
+									<version>${any23.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/lib</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.apache.any23</groupId>
+									<artifactId>apache-any23-encoding</artifactId>
+									<version>${any23.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/lib</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.apache.any23</groupId>
+									<artifactId>apache-any23-mime</artifactId>
+									<version>${any23.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/lib</outputDirectory>
+								</artifactItem>
 
 							</artifactItems>
 						</configuration>
@@ -144,6 +180,37 @@
 			<groupId>xmlpull</groupId>
 			<artifactId>xmlpull</artifactId>
 			<version>${xstream.xmlpull.version}</version>
+		</dependency>
+		
+				<dependency>
+			<groupId>org.apache.any23</groupId>
+			<artifactId>apache-any23-core</artifactId>
+			<version>${any23.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.any23</groupId>
+			<artifactId>apache-any23-api</artifactId>
+			<version>${any23.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.any23</groupId>
+			<artifactId>apache-any23-csvutils</artifactId>
+			<version>${any23.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.any23</groupId>
+			<artifactId>apache-any23-encoding</artifactId>
+			<version>${any23.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.any23</groupId>
+			<artifactId>apache-any23-mime</artifactId>
+			<version>${any23.version}</version>
 		</dependency>
 	</dependencies>
 </project>

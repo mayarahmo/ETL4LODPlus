@@ -8,9 +8,9 @@
 	<packaging>pom</packaging>
 	<version>2.0</version>
 
-	<name>ETL4LOD</name>
+	<name>ETL4LOD++</name>
 	<description>Plugins do Kettle para uso de RDF</description>
-	<url>https://github.com/johncurcio/ETL4LODPlus.git</url>
+	<url>https://github.com/mayarahmo/ETL4LODPlus.git</url>
 	
 	<build>
 		<plugins>
@@ -26,6 +26,9 @@
 						<configuration>
 							<target name="i18n-hack">
 								<echo message="Copying i18n files" />
+								<copy todir="${basedir}/Any23Converter/src/main/java" overwrite="true">
+									<fileset dir="${basedir}/src/main/java" includes="**/*.properties" />
+								</copy>
 								<copy todir="${basedir}/Annotator/src/main/java" overwrite="true">
 									<fileset dir="${basedir}/src/main/java" includes="**/*.properties" />
 								</copy>
@@ -98,7 +101,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 
 
-		<pdi.home>C:/Users/jfc29/Downloads/data-integration</pdi.home>
+		<pdi.home>D:/MayaraMorais/Documents/data-integration</pdi.home>
 		<pdi.plugin.dir>plugins/steps/${project.name}</pdi.plugin.dir>
 		<pdi.plugin.lib_name>${project.artifactId}</pdi.plugin.lib_name>
 
@@ -224,6 +227,7 @@
 	</dependencies>
 
 	<modules>
+		<module>Any23Converter</module>
 		<module>Annotator</module>
 		<module>DataCube</module>
 		<module>DataPropertyMapping</module>
